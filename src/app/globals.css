@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #000000;
+  --brand: #ff4016;
+  --accent: #744eaa;
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-accent: var(--accent);
+  --font-serif: var(--font-crimson-pro);
+  --font-sans: var(--font-archivo);
+}
+
+/* Crimson Pro carries the display voice (it's the logo's face); Archivo
+   carries body and UI text. */
+body {
+  background: #ffffff;
+  color: var(--foreground);
+  font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-crimson-pro), Georgia, "Times New Roman", serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
